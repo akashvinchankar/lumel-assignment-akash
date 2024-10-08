@@ -24,7 +24,7 @@ const TableRow = ({ row, updateRowValue }) => {
   return (
     <>
       <tr>
-        <td>{row.label}</td>
+        <td>{!row.children ? `-- ${row.label}` : row.label}</td>
         <td>{row.value.toFixed(4)}</td>
         <td>
           <input
